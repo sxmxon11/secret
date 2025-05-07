@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <title>Bildanzeige Vollbild</title>
+  <title>Vollbildanzeige</title>
   <style>
     html, body {
       margin: 0;
@@ -19,16 +19,16 @@
   </style>
 </head>
 <body onclick="openFullscreen()">
-  <img src="lideka.png" alt="Vollbildanzeige">
+  <img src="lideka.png" alt="Anzeige">
 
   <script>
     function openFullscreen() {
       const elem = document.documentElement;
       if (elem.requestFullscreen) {
         elem.requestFullscreen();
-      } else if (elem.webkitRequestFullscreen) {
+      } else if (elem.webkitRequestFullscreen) { /* Safari */
         elem.webkitRequestFullscreen();
-      } else if (elem.msRequestFullscreen) {
+      } else if (elem.msRequestFullscreen) { /* IE11 */
         elem.msRequestFullscreen();
       }
     }
